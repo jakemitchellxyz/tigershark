@@ -2,19 +2,23 @@
   "name": "tigershark",
   "version": "0.1.0",
   "private": true,
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "postbuild": "react-snap",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "api:dev": "netlify-lambda serve ./src/lambda/",
+    "api:build": "netlify-lambda build ./src/lambda/"
+  },
   "dependencies": {
     "netlify-lambda": "^1.4.7",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-scripts": "3.0.0"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "api:dev": "netlify-lambda serve ./src/lambda/",
-    "api:build": "netlify-lambda build ./src/lambda/"
+  "devDependencies": {
+    "react-snap": "^1.23.0"
   },
   "eslintConfig": {
     "extends": "react-app"
